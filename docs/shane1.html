@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Order Details - Elle's Flower Botique</title>
 	<link rel="stylesheet" href="style2.css">
+	<script src="header-scroll.js" defer></script>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=London&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
@@ -135,26 +137,26 @@ function redirectToOrderDetailsPagePickup() {
 	<div class="container">
 		<div class="navbar">
 			<div class="logo">
-				<a href="index.html"><img src="../assets/logow.png" width="125px"></a>
+				<a href="index.html"><img src="assets/text-logo.png" width="125px"></a>
 			</div>
 			<nav>
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="products.html">Arrangements</a></li>
-					<li><a href="about us.html">About</a></li>
+					<li><a href="about-us.html">About</a></li>
 				</ul>
 			</nav>
-			<img src="../assets/bouquet.png" width="70px" height=auto>
+			<img src="assets/boquet.png" width="70px" height=auto>
 		</div>
 	</div>
 	
 	<div  class="small-container">
 		<div class="checkout-header">
-		<p>Check-Out</p>
+		<p>Arrange Your Order</p>
 		</div>
 		<div class="row">
 			<div class="col-2">
-				<img src="../assets/products/shane.png">
+				<img src="assets/products/shane.png">
 			</div>
 			<div class="details-section">
 				<div class="disclaimer">
@@ -162,11 +164,11 @@ function redirectToOrderDetailsPagePickup() {
 				</div>
 				<h1>Shane</h1>
 				<p>a dozen of light pink roses</p>
-				<h4>₱1,500.00</h4>
+				<h4>&#8369;1,500.00</h4>
 				<div class="shipping-section">
 					<label for="shipping-method">Shipping Method:</label>
 					<select id="shipping-method" name="shipping-method" onchange="toggleAddressSection()">
-						<option value="delivery"><i>Choose One</i></option>
+						<option value="" selected disabled>Choose one</option>
 						<option value="delivery">Delivery</option>
 						<option value="pickup">Pick-up</option>
 					</select>
@@ -181,7 +183,7 @@ function redirectToOrderDetailsPagePickup() {
 					<textarea id="delivery-address" name="delivery-address" rows="4" cols="50"></textarea>
 					
 					<label for="contact-info">Email:</label>
-					<input type="text" id="contact-info" name="contact-info">
+					<input type="email" id="contact-info" name="contact-info" placeholder="your@email.com">
 					
 					<label for="customer-name">Customer Name:</label>
 					<input type="text" id="customer-name" name="customer-name">
@@ -198,7 +200,7 @@ function redirectToOrderDetailsPagePickup() {
 					<label for="order-notes">Order Notes:</label>
 					<textarea id="order-notes" name="order-notes" rows="4" cols="50" placeholder="Add specifications or special requests..."></textarea>
 					<div class="checkout-button">
-					<button id="checkoutBtn" onclick="redirectToOrderDetailsPage()">Check-Out</button>
+					<button id="checkoutBtn" onclick="redirectToOrderDetailsPage()">Review Order</button>
 					</div>
 				</div>
 
@@ -207,10 +209,10 @@ function redirectToOrderDetailsPagePickup() {
 					<label for="pickup-date">Pick-up Date:</label>
 					<input type="date" id="pickup-date" name="pickup-date" min="" required>
 
-					<p>Pick-up Address: Elle's Flower Boutique, 83 Timbugan, Rosario, Batangas</p>
+					<p>Pick-up Address: Elle's Flower Boutique, 83 Timbugan, Rosario, Batangas.</p>
 
 					<label for="contact-info">Email:</label>
-					<input type="text" id="contact-info-p" name="contact-info-p">
+					<input type="email" id="contact-info-p" name="contact-info-p" placeholder="your@email.com">
 					
 					<label for="customer-name">Customer Name:</label>
 					<input type="text" id="customer-name-p" name="customer-name-p">
@@ -228,7 +230,7 @@ function redirectToOrderDetailsPagePickup() {
 					<textarea id="order-notes-p" name="order-notes-p" rows="4" cols="50" placeholder="Add specifications or special requests..."></textarea>
 			
 				<div class="checkout-button">
-					 <button id="checkoutBtn" onclick="redirectToOrderDetailsPagePickup()">Check-Out</button>
+					 <button id="checkoutBtn" onclick="redirectToOrderDetailsPagePickup()">Review Order</button>
 
 				</div>
 			</div>
@@ -253,15 +255,15 @@ function redirectToOrderDetailsPagePickup() {
 					<p>Phone:+63-995-866-3587</p>
 				</div>
 				<div class="footer-col-2">
-					<img src="../assets/logo.png" width="150px">
+					<img src="assets/elle-logo.png" width="150px">
 					<p>Our bouquets are made from locally sourced and sustainable materials</p>
 				</div>
 				<div class="footer-col-3">
 					<h3 align=left> Follow us:</h3>
 					<div class="social-icons">
-						<p align=right><a href="https://www.facebook.com/ellesugarandblooms"><img src="../assets/fb.png" width="60px" alt="Facebook"></a>
-						<a href="https://twitter.com/espelazyy"><img src="../assets/twt.png" width="60px" alt="Twitter"></a>
-						<a href="https://www.instagram.com/ellesugarandblooms/"><img src="../assets/ig.png" width="60px" alt="Instagram"></a></p>
+						<p align=right><a href="https://www.facebook.com/ellesugarandblooms"><img src="assets/fb.png" width="60px" alt="Facebook"></a>
+						<a href="https://twitter.com/espelazyy"><img src="assets/twt.png" width="60px" alt="Twitter"></a>
+						<a href="https://www.instagram.com/ellesugarandblooms/"><img src="assets/ig.png" width="60px" alt="Instagram"></a></p>
 					</div>
 				</div>
 			</div>
@@ -277,3 +279,8 @@ function redirectToOrderDetailsPagePickup() {
 </div>
 </body>
 </html>
+
+
+
+
+

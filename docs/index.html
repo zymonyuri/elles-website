@@ -1,90 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Elle's Flower Botique</title>
-	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=London&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
-
-
-
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elle's Flower Boutique</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="header-scroll.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=London&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class="container">
-		<div class="navbar">
-			<div class="logo">
-				<a href="index.html"><img src="../assets/logow.png" width="125px"></a>
-			</div>
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="products.html">Arrangements</a></li>
-					<li><a href="about us.html">About</a></li>
-				</ul>
-			</nav>
-			<img src="../assets/bouquet.png" width="70px" height=auto>
-		</div>
-	</div>
-	<div class="background">
-				<img src="../assets/background2.jpg" style="width:100%;">
-			<div class="text">
-				<h1 style="color:white;">whispers of love in every petal.</h1>
-				<p style="color:white;"><i>in each petal, love whispers silently, crafting a floral symphony that speaks to the soul.</p></i>
-			</div>
-	</div>	
-	<div class="featured">
-			<h2>Featured Bouquets</h2>
-			<div class="row">
-				<div class="col-3">
-					<a href="ivory1.html"><img src="../assets/products/ivory.png">
-					<h4> Ivory </h4></a>
-					<p> a dozen of white roses </p>
-				</div>
-				<div class="col-3">
-					<a href="bella1.html"><img src="../assets/products/bella.png">
-					<h4> Bella </h4></a>
-					<p>stargazer bouquet</p>
-				</div>
-				<div class="col-3">
-					<a href="shane1.html"><img src="../assets/products/shane.png">
-					<h4> Christine </h4></a>
-					<p>a dozen of light pink roses</p>
-				</div>
-			</div>
-	<h3><a href="products.html">See full collection &#x2192</a></h3>
-	</div>
-	
-	<div class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="footer-col-1">
-					<h3>Contact us:</h3>
-					<p>Email: ellesflower@gmail.com</p>
-					<p>Phone:+63-995-866-3587</p>
-				</div>
-				<div class="footer-col-2">
-					<img src="../assets/logo.png" width="150px">
-					<p>Our bouquets are made from locally sourced and sustainable materials</p>
-				</div>
-				<div class="footer-col-3">
-					<h3 align=left> Follow us:</h3>
-					<div class="social-icons">
-						<p align=right><a href="https://www.facebook.com/ellesugarandblooms"><img src="../assets/fb.png" width="60px" alt="Facebook"></a>
-						<a href="https://twitter.com/espelazyy"><img src="../assets/twt.png" width="60px" alt="Twitter"></a>
-						<a href="https://www.instagram.com/ellesugarandblooms/"><img src="../assets/ig.png" width="60px" alt="Instagram"></a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bottom-bar">
-				<p>&copy; 2023 Elle's Flower Boutique. All rights reserved.</p>
-		</div>
-	</div>
+    <header class="hero-section">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="assets/text-logo.png" alt="Elle's Flower Boutique logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Arrangements</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                </ul>
+            </nav>
+            <img src="assets/boquet.png" alt="Bouquet icon">
+        </div>
 
+        <div class="container hero-media">
+            <img src="assets/background2.jpg" alt="Romantic bouquet arrangement">
+            <div class="hero-copy">
+                <h1>Whispers of love in every petal.</h1>
+                <p>Each bouquet is arranged to feel intimate, thoughtful, and softly memorable, made for celebrations, confessions, and every tender in-between moment.</p>
+                <div class="hero-actions">
+                    <a class="button-link" href="products.html">Browse The Collection</a>
+                    <a class="button-link alt" href="about-us.html">Meet The Story</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <section class="featured">
+        <div class="container">
+            <div class="section-heading">
+                <div>
+                    <h2>Featured Bouquets</h2>
+                    <p class="featured-intro">A romantic edit of best-loved arrangements for birthdays, anniversaries, surprises, and soft grand gestures.</p>
+                </div>
+            </div>
+
+            <div class="featured-grid">
+                <article class="product-card">
+                    <a href="ivory1.html">
+                        <img src="assets/products/ivory.png" alt="Ivory bouquet">
+                    </a>
+                    <div class="card-copy">
+                        <a href="ivory1.html"><h4>Ivory</h4></a>
+                        <p>A dozen white roses with a timeless, graceful feel.</p>
+                        <span class="price-tag">&#8369;1,500.00</span>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="bella1.html">
+                        <img src="assets/products/bella.png" alt="Bella bouquet">
+                    </a>
+                    <div class="card-copy">
+                        <a href="bella1.html"><h4>Bella</h4></a>
+                        <p>A stargazer bouquet designed to feel soft, bright, and celebratory.</p>
+                        <span class="price-tag">&#8369;1,300.00</span>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="shane1.html">
+                        <img src="assets/products/shane.png" alt="Shane bouquet">
+                    </a>
+                    <div class="card-copy">
+                        <a href="shane1.html"><h4>Shane</h4></a>
+                        <p>A dozen light pink roses with a delicate, affectionate character.</p>
+                        <span class="price-tag">&#8369;1,500.00</span>
+                    </div>
+                </article>
+            </div>
+
+            <h3><a href="products.html">See Full Collection</a></h3>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Contact Us</h3>
+                    <p>Email: ellesflower@gmail.com</p>
+                    <p>Phone: +63-995-866-3587</p>
+                </div>
+                <div class="footer-col-2">
+                    <img src="assets/elle-logo.png" alt="Elle's Flower Boutique mark">
+                    <p>Handcrafted bouquets made with locally sourced blooms and a love for romantic details.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/ellesugarandblooms" aria-label="Facebook"><img src="assets/fb.png" alt=""></a>
+                        <a href="https://twitter.com/espelazyy" aria-label="Twitter"><img src="assets/twt.png" alt=""></a>
+                        <a href="https://www.instagram.com/ellesugarandblooms/" aria-label="Instagram"><img src="assets/ig.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2023 Elle's Flower Boutique. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
+
+
+
+

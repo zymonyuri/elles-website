@@ -5,59 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Completed - Elle's Flower Boutique</title>
     <link rel="stylesheet" href="style3.css">
+    <script src="header-scroll.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=London&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=London&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="background">
-        <div class="nav-container">
-            <div class="navbar">
-                <div class="logo">
-                    <a href="index.html"><img src="../assets/logow.png" width="125px"></a>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Arrangements</a></li>
-                        <li><a href="about us.html">About</a></li>
-                    </ul>
-                </nav>
-                <img src="../assets/bouquet.png" width="70px" height=auto>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="assets/text-logo.png" alt="Elle's Flower Boutique logo"></a>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Arrangements</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                </ul>
+            </nav>
+            <img src="assets/boquet.png" alt="Bouquet icon">
         </div>
-      <div class="container">
-          
+
+        <div class="container">
             <div class="centered-content">
-                <img src="../assets/heart.png" alt="Centered Image">
+                <img src="assets/heart.png" alt="Decorative heart">
             </div>
-			  <div class="center-content">
+            <div class="center-content">
                 <h1>Thank you for trusting Elle!</h1>
-                <p>Your order has been successfully completed. <br> An email will be sent to you regarding the payment details</p>
-                <button id="goHome" class="custom-button">Browse more</button>
+                <p>Your order has been placed successfully. We'll send payment details and the next steps to your email shortly.</p>
+                <div class="button-row">
+                    <a href="products.html" class="custom-button">Browse More</a>
+                    <a href="index.html" class="custom-button secondary">Back To Home</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="footer">
+
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="footer-col-1">
-                    <h3>Contact us:</h3>
+                    <h3>Contact Us</h3>
                     <p>Email: ellesflower@gmail.com</p>
-                    <p>Phone:+63-995-866-3587</p>
+                    <p>Phone: +63-995-866-3587</p>
                 </div>
                 <div class="footer-col-2">
-                    <img src="../assets/logo.png" width="150px">
-                    <p>Our bouquets are made from locally sourced and sustainable materials</p>
+                    <img src="assets/elle-logo.png" alt="Elle's Flower Boutique mark">
+                    <p>Our bouquets are made with locally sourced blooms and arranged to feel deeply personal.</p>
                 </div>
                 <div class="footer-col-3">
-                    <h3 align=left> Follow us:</h3>
+                    <h3>Follow Us</h3>
                     <div class="social-icons">
-                        <p align=right>
-                            <a href="https://www.facebook.com/ellesugarandblooms"><img src="../assets/fb.png" width="60px" alt="Facebook"></a>
-                            <a href="https://twitter.com/espelazyy"><img src="../assets/twt.png" width="60px" alt="Twitter"></a>
-                            <a href="https://www.instagram.com/ellesugarandblooms/"><img src="../assets/ig.png" width="60px" alt="Instagram"></a>
-                        </p>
+                        <a href="https://www.facebook.com/ellesugarandblooms" aria-label="Facebook"><img src="assets/fb.png" alt=""></a>
+                        <a href="https://twitter.com/espelazyy" aria-label="Twitter"><img src="assets/twt.png" alt=""></a>
+                        <a href="https://www.instagram.com/ellesugarandblooms/" aria-label="Instagram"><img src="assets/ig.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -65,12 +66,10 @@
         <div class="bottom-bar">
             <p>&copy; 2023 Elle's Flower Boutique. All rights reserved.</p>
         </div>
-    </div>
-   <script>
-
-    document.getElementById("goHome").addEventListener("click", function() {
-        window.location.href = "file:///C:/Users/Malvin Christian/Downloads/Espela/Website/index.html";
-    });
-</script>
+    </footer>
 </body>
 </html>
+
+
+
+

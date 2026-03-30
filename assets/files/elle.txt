@@ -1,5 +1,0 @@
-<html>
-<title>Elle's Sugar and Blooms</title>
-
-<font face="brush script mt" size="10">
-<h1 align="center"> Elle's Sugar and Blooms</h1>

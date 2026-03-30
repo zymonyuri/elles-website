@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check-Out - Elle's Flower Botique</title>
-    <link rel="stylesheet" href="style3.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style3.css">
+	<script src="header-scroll.js" defer></script>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=London&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
 </head>
@@ -14,16 +15,16 @@
     <div class="nav-container">
         <div class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="../assets/logow.png" width="125px"></a>
+                <a href="index.html"><img src="assets/text-logo.png" width="125px"></a>
             </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Arrangements</a></li>
-                    <li><a href="about us.html">About</a></li>
+					<li><a href="about-us.html">About</a></li>
                 </ul>
             </nav>
-            <img src="../assets/bouquet.png" width="70px" height=auto>
+            <img src="assets/boquet.png" width="70px" height=auto>
         </div>
     </div>
     <div class="container-or">
@@ -31,7 +32,7 @@
             
             <h1>Order Details</h1>
 			<h2>Bella</h2>
-			<h4>(stargazer bouquet) ₱1,300.00</h4>
+			<h4>(stargazer bouquet) &#8369;1,300.00</h4>
             
             <p class="delivery-info">Delivery Date: <span id="display-delivery-date"></span></p>
             <p class="delivery-info">Delivery Address: <span id="display-delivery-address"></span></p>
@@ -51,10 +52,12 @@
             <p class="pickup-info" style="display: none;">From (Pickup): <span id="display-from-p"></span></p>
             <p class="pickup-info" style="display: none;">Order Notes (Pickup): <span id="display-order-notes-p"></span></p>
 
-            <button onclick="goBack()" class="custom-button">Go Back</button>
+            <div class="button-row">
+<button id="goBackBtn" onclick="goBack()" class="custom-button secondary">Go Back</button>
 
 
 <button id="completeOrderBtn" class="custom-button">Complete Order</button>
+</div>
         </div>
     </div>
 </div>
@@ -67,15 +70,15 @@
                 <p>Phone:+63-995-866-3587</p>
             </div>
             <div class="footer-col-2">
-                <img src="../assets/logo.png" width="150px">
+                <img src="assets/elle-logo.png" width="150px">
                 <p>Our bouquets are made from locally sourced and sustainable materials</p>
             </div>
             <div class="footer-col-3">
                 <h3 align=left> Follow us:</h3>
                 <div class="social-icons">
-                    <p align=right><a href="https://www.facebook.com/ellesugarandblooms"><img src="../assets/fb.png" width="60px" alt="Facebook"></a>
-                    <a href="https://twitter.com/espelazyy"><img src="../assets/twt.png" width="60px" alt="Twitter"></a>
-                    <a href="https://www.instagram.com/ellesugarandblooms/"><img src="../assets/ig.png" width="60px" alt="Instagram"></a></p>
+                    <p align=right><a href="https://www.facebook.com/ellesugarandblooms"><img src="assets/fb.png" width="60px" alt="Facebook"></a>
+                    <a href="https://twitter.com/espelazyy"><img src="assets/twt.png" width="60px" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/ellesugarandblooms/"><img src="assets/ig.png" width="60px" alt="Instagram"></a></p>
                 </div>
             </div>
         </div>
@@ -139,11 +142,13 @@
         
         window.location.href = "bella1.html";
     }
-
-   
-    document.getElementById("goBackBtn").addEventListener("click", goBack);
 </script>
 
 
 </body>
 </html>
+
+
+
+
+
