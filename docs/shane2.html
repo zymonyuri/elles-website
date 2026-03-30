@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-Out - Elle's Flower Botique</title>
+    <link rel="stylesheet" href="style3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=London&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="background">
+    <div class="nav-container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="../assets/logow.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Arrangements</a></li>
+                    <li><a href="about us.html">About</a></li>
+                </ul>
+            </nav>
+            <img src="../assets/bouquet.png" width="70px" height=auto>
+        </div>
+    </div>
+    <div class="container-or">
+        <div class="details-section">
+            
+            <h1>Order Details</h1>
+			<h2>Shane</h2>
+			<h4>(a dozen of light pink roses) ₱1,500.00</h4>
+     
+            <p class="delivery-info">Delivery Date: <span id="display-delivery-date"></span></p>
+            <p class="delivery-info">Delivery Address: <span id="display-delivery-address"></span></p>
+            <p class="delivery-info">Email: <span id="display-contact-info"></span></p>
+            <p class="delivery-info">Customer Name: <span id="display-customer-name"></span></p>
+            <p class="delivery-info">To: <span id="display-to"></span></p>
+            <p class="delivery-info">Message: <span id="display-message"></span></p>
+            <p class="delivery-info">From: <span id="display-from"></span></p>
+            <p class="delivery-info">Order Notes: <span id="display-order-notes"></span></p>
+
+   
+            <p class="pickup-info" style="display: none;">Pick-up Date: <span id="display-pickup-date"></span></p>
+            <p class="pickup-info" style="display: none;">Email (Pickup): <span id="display-contact-info-p"></span></p>
+            <p class="pickup-info" style="display: none;">Customer Name (Pickup): <span id="display-customer-name-p"></span></p>
+            <p class="pickup-info" style="display: none;">To (Pickup): <span id="display-to-p"></span></p>
+            <p class="pickup-info" style="display: none;">Message (Pickup): <span id="display-message-p"></span></p>
+            <p class="pickup-info" style="display: none;">From (Pickup): <span id="display-from-p"></span></p>
+            <p class="pickup-info" style="display: none;">Order Notes (Pickup): <span id="display-order-notes-p"></span></p>
+
+            <button onclick="goBack()" class="custom-button">Go Back</button>
+
+
+<button id="completeOrderBtn" class="custom-button">Complete Order</button>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Contact us:</h3>
+                <p>Email: ellesflower@gmail.com</p>
+                <p>Phone:+63-995-866-3587</p>
+            </div>
+            <div class="footer-col-2">
+                <img src="../assets/logo.png" width="150px">
+                <p>Our bouquets are made from locally sourced and sustainable materials</p>
+            </div>
+            <div class="footer-col-3">
+                <h3 align=left> Follow us:</h3>
+                <div class="social-icons">
+                    <p align=right><a href="https://www.facebook.com/ellesugarandblooms"><img src="../assets/fb.png" width="60px" alt="Facebook"></a>
+                    <a href="https://twitter.com/espelazyy"><img src="../assets/twt.png" width="60px" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/ellesugarandblooms/"><img src="../assets/ig.png" width="60px" alt="Instagram"></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <p>&copy; 2023 Elle's Flower Boutique. All rights reserved.</p>
+    </div>
+</div>
+
+
+<script>
+    
+    function completeOrder() {
+        
+        window.location.href = "final.html";
+    }
+
+  
+    var urlParams = new URLSearchParams(window.location.search);
+
+
+    document.getElementById("display-delivery-date").innerText = urlParams.get("delivery-date") || '';
+    document.getElementById("display-delivery-address").innerText = urlParams.get("delivery-address") || '';
+    document.getElementById("display-contact-info").innerText = urlParams.get("contact-info") || '';
+    document.getElementById("display-customer-name").innerText = urlParams.get("customer-name") || '';
+    document.getElementById("display-message").innerText = urlParams.get("message") || '';
+    document.getElementById("display-to").innerText = urlParams.get("to") || '';
+    document.getElementById("display-from").innerText = urlParams.get("from") || '';
+    document.getElementById("display-order-notes").innerText = urlParams.get("order-notes") || '';
+
+
+    var isPickup = urlParams.get("shipping-method") === "pickup";
+
+
+    var deliveryElements = document.querySelectorAll(".delivery-info");
+    var pickupElements = document.querySelectorAll(".pickup-info");
+
+    deliveryElements.forEach(function (element) {
+        element.style.display = isPickup ? "none" : "block";
+    });
+
+    pickupElements.forEach(function (element) {
+        element.style.display = isPickup ? "block" : "none";
+    });
+
+
+    if (isPickup) {
+        document.getElementById("display-pickup-date").innerText = urlParams.get("pickup-date") || '';
+        document.getElementById("display-contact-info-p").innerText = urlParams.get("contact-info-p") || '';
+        document.getElementById("display-customer-name-p").innerText = urlParams.get("customer-name-p") || '';
+        document.getElementById("display-to-p").innerText = urlParams.get("to-p") || '';
+        document.getElementById("display-message-p").innerText = urlParams.get("message-p") || '';
+        document.getElementById("display-from-p").innerText = urlParams.get("from-p") || '';
+        document.getElementById("display-order-notes-p").innerText = urlParams.get("order-notes-p") || '';
+    }
+
+
+    document.getElementById("completeOrderBtn").addEventListener("click", completeOrder);
+
+   
+    function goBack() {
+
+        window.location.href = "shane1.html";
+    }
+
+
+    document.getElementById("goBackBtn").addEventListener("click", goBack);
+</script>
+
+
+</body>
+</html>

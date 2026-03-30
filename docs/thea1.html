@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Order Details - Elle's Flower Botique</title>
+	<link rel="stylesheet" href="style2.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=London&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+	
+	<script>
+	    function toggleAddressSection() {
+	        var shippingMethod = document.getElementById("shipping-method");
+	        var deliverySection = document.getElementById("deliverySection");
+	        var pickupSection = document.getElementById("pickupSection");
+
+	        if (shippingMethod.value === "delivery") {
+	            deliverySection.style.display = "block";
+	            pickupSection.style.display = "none";
+
+	            var minDeliveryDate = new Date();
+	            minDeliveryDate.setDate(minDeliveryDate.getDate() + 2);
+	            document.getElementById("delivery-date").min = formatDate(minDeliveryDate);
+	        } else if (shippingMethod.value === "pickup") {
+	            deliverySection.style.display = "none";
+	            pickupSection.style.display = "block";
+
+	            var minPickupDate = new Date();
+	            minPickupDate.setDate(minPickupDate.getDate() + 2);
+	            document.getElementById("pickup-date").min = formatDate(minPickupDate);
+	        } else {
+	            deliverySection.style.display = "none";
+	            pickupSection.style.display = "none";
+	        }
+	    }
+
+	    function formatDate(date) {
+	        var dd = String(date.getDate()).padStart(2, '0');
+	        var mm = String(date.getMonth() + 1).padStart(2, '0');
+	        var yyyy = date.getFullYear();
+	        return yyyy + '-' + mm + '-' + dd;
+	    }
+
+	    function displayOrderDetails() {
+	        var orderDetails = document.getElementById("thea2");
+	        orderDetails.innerHTML = ""; 
+
+	      
+	        var deliveryDate = document.getElementById("delivery-date").value;
+	        var deliveryAddress = document.getElementById("delivery-address").value;
+	        var contactInfo = document.getElementById("contact-info").value;
+	        var customerName = document.getElementById("customer-name").value;
+	        var to = document.getElementById("to").value;
+	        var message = document.getElementById("message").value;
+	        var from = document.getElementById("from").value;
+	        var orderNotes = document.getElementById("order-notes").value;
+
+	  
+	        var detailsHTML = "<p><strong>Order Details:</strong></p>";
+	        detailsHTML += "<p><strong>Delivery Date:</strong> " + deliveryDate + "</p>";
+	        detailsHTML += "<p><strong>Delivery Address:</strong> " + deliveryAddress + "</p>";
+	        detailsHTML += "<p><strong>Contact Information:</strong> " + contactInfo + "</p>";
+	        detailsHTML += "<p><strong>Customer Name:</strong> " + customerName + "</p>";
+	        detailsHTML += "<p><strong>To:</strong> " + to + "</p>";
+	        detailsHTML += "<p><strong>Message:</strong> " + message + "</p>";
+	        detailsHTML += "<p><strong>From:</strong> " + from + "</p>";
+	        detailsHTML += "<p><strong>Order Notes:</strong> " + orderNotes + "</p>";
+
+	        orderDetails.innerHTML = detailsHTML;
+			
+		
+	    }
+function redirectToOrderDetailsPage() {
+
+    var deliveryDate = document.getElementById("delivery-date").value;
+    var deliveryAddress = document.getElementById("delivery-address").value;
+    var contactInfo = document.getElementById("contact-info").value;
+    var customerName = document.getElementById("customer-name").value;
+    var message = document.getElementById("message").value;
+    var to = document.getElementById("to").value;
+    var from = document.getElementById("from").value;
+    var orderNotes = document.getElementById("order-notes").value;
+
+
+    var deliveryUrl = "thea2.html" +
+        "?delivery-date=" + encodeURIComponent(deliveryDate) +
+        "&delivery-address=" + encodeURIComponent(deliveryAddress) +
+        "&contact-info=" + encodeURIComponent(contactInfo) +
+        "&customer-name=" + encodeURIComponent(customerName) +
+        "&message=" + encodeURIComponent(message) +
+        "&to=" + encodeURIComponent(to) +
+        "&from=" + encodeURIComponent(from) +
+        "&order-notes=" + encodeURIComponent(orderNotes);
+
+
+    window.location.href = deliveryUrl;
+}
+
+function redirectToOrderDetailsPagePickup() {
+      
+        var pickupDate = document.getElementById("pickup-date").value;
+        var contactInfoP = document.getElementById("contact-info-p").value;
+        var customerNameP = document.getElementById("customer-name-p").value;
+        var toP = document.getElementById("to-p").value;
+        var messageP = document.getElementById("message-p").value;
+        var fromP = document.getElementById("from-p").value;
+        var orderNotesP = document.getElementById("order-notes-p").value;
+
+     
+        var pickupUrl = "thea2.html" +
+            "?shipping-method=pickup" +
+            "&pickup-date=" + encodeURIComponent(pickupDate) +
+            "&contact-info-p=" + encodeURIComponent(contactInfoP) +
+            "&customer-name-p=" + encodeURIComponent(customerNameP) +
+            "&to-p=" + encodeURIComponent(toP) +
+            "&message-p=" + encodeURIComponent(messageP) +
+            "&from-p=" + encodeURIComponent(fromP) +
+            "&order-notes-p=" + encodeURIComponent(orderNotesP);
+
+  
+        window.location.href = pickupUrl;
+    }
+</script>
+
+</head>
+<body>
+	
+	<div class="background">
+
+	<div class="container">
+		<div class="navbar">
+			<div class="logo">
+				<a href="index.html"><img src="../assets/logow.png" width="125px"></a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Arrangements</a></li>
+					<li><a href="about us.html">About</a></li>
+				</ul>
+			</nav>
+			<img src="../assets/bouquet.png" width="70px" height=auto>
+		</div>
+	</div>
+	
+	<div  class="small-container">
+		<div class="checkout-header">
+		<p>Check-Out</p>
+		</div>
+		<div class="row">
+			<div class="col-2">
+				<img src="../assets/products/thea.png">
+			</div>
+			<div class="details-section">
+				<div class="disclaimer">
+				<p><i>Disclaimer: We only accept orders with a minimum two-day notice.</i></p>
+				</div>
+				<h1>Thea</h1>
+				<p>six pink roses and stargazer</p>
+				<h4>₱1,500.00</h4>
+				<div class="shipping-section">
+					<label for="shipping-method">Shipping Method:</label>
+					<select id="shipping-method" name="shipping-method" onchange="toggleAddressSection()">
+						<option value="delivery"><i>Choose One</i></option>
+						<option value="delivery">Delivery</option>
+						<option value="pickup">Pick-up</option>
+					</select>
+
+				</div>
+			
+				<div class="delivery-section" id="deliverySection" style="display: none;">
+					<label for="delivery-date">Delivery Date:</label>
+					<input type="date" id="delivery-date" name="delivery-date" min="" required>
+
+					<label for="delivery-address">Delivery Address:</label>
+					<textarea id="delivery-address" name="delivery-address" rows="4" cols="50"></textarea>
+					
+					<label for="contact-info">Email:</label>
+					<input type="text" id="contact-info" name="contact-info">
+					
+					<label for="customer-name">Customer Name:</label>
+					<input type="text" id="customer-name" name="customer-name">
+					
+					<label for="to">To:</label>
+					<input type="text" id="to" name="to" placeholder="Recipient's Name">
+
+					<label for="message">Message:</label>
+					<textarea id="message" name="message" rows="4" cols="50" placeholder="Your personalized message"></textarea>
+
+					<label for="from">From:</label>
+					<input type="text" id="from" name="from" placeholder="Your Name">
+					
+					<label for="order-notes">Order Notes:</label>
+					<textarea id="order-notes" name="order-notes" rows="4" cols="50" placeholder="Add specifications or special requests..."></textarea>
+					<div class="checkout-button">
+					<button id="checkoutBtn" onclick="redirectToOrderDetailsPage()">Check-Out</button>
+					</div>
+				</div>
+
+	
+				<div class="pickup-section" id="pickupSection" style="display: none;">
+					<label for="pickup-date">Pick-up Date:</label>
+					<input type="date" id="pickup-date" name="pickup-date" min="" required>
+
+					<p>Pick-up Address: Elle's Flower Boutique, 83 Timbugan, Rosario, Batangas</p>
+
+					<label for="contact-info">Email:</label>
+					<input type="text" id="contact-info-p" name="contact-info-p">
+					
+					<label for="customer-name">Customer Name:</label>
+					<input type="text" id="customer-name-p" name="customer-name-p">
+					
+					<label for="to">To:</label>
+					<input type="text" id="to-p" name="to-p" placeholder="Recipient's Name">
+
+					<label for="message">Message:</label>
+					<textarea id="message-p" name="message-p" rows="4" cols="50" placeholder="Your personalized message"></textarea>
+
+					<label for="from">From:</label>
+					<input type="text" id="from-p" name="from-p" placeholder="Your Name">
+					
+					<label for="order-notes">Order Notes:</label>
+					<textarea id="order-notes-p" name="order-notes-p" rows="4" cols="50" placeholder="Add specifications or special requests..."></textarea>
+			
+				<div class="checkout-button">
+					 <button id="checkoutBtn" onclick="redirectToOrderDetailsPagePickup()">Check-Out</button>
+
+				</div>
+			</div>
+			
+		</div>
+		</div>
+		
+	</div>
+	</div>
+
+
+
+
+
+
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col-1">
+					<h3>Contact us:</h3>
+					<p>Email: ellesflower@gmail.com</p>
+					<p>Phone:+63-995-866-3587</p>
+				</div>
+				<div class="footer-col-2">
+					<img src="../assets/logo.png" width="150px">
+					<p>Our bouquets are made from locally sourced and sustainable materials</p>
+				</div>
+				<div class="footer-col-3">
+					<h3 align=left> Follow us:</h3>
+					<div class="social-icons">
+						<p align=right><a href="https://www.facebook.com/ellesugarandblooms"><img src="../assets/fb.png" width="60px" alt="Facebook"></a>
+						<a href="https://twitter.com/espelazyy"><img src="../assets/twt.png" width="60px" alt="Twitter"></a>
+						<a href="https://www.instagram.com/ellesugarandblooms/"><img src="../assets/ig.png" width="60px" alt="Instagram"></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-bar">
+				<p>&copy; 2023 Elle's Flower Boutique. All rights reserved.</p>
+		</div>
+	</div>
+
+	
+
+	
+</div>
+</body>
+</html>
